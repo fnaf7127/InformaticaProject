@@ -45,12 +45,11 @@ body {
     margin: auto;
 }
 
-.line {
-    background: rgb(47, 47, 47);
-    height: 3px;
-    width: 30%;
-    justify-content: center;
-    margin: 1% auto
+.rounded {
+    border-top: 3px solid black;
+    border-radius: 3px;
+    margin: 1.5% auto;
+    width: 50%;
 }
 
 .personal {
@@ -63,7 +62,7 @@ body {
     text-align: center;
     font-size: 100%;
     margin: 2% auto;
-    border: 3px solid rgb(91, 0, 119);
+    border: 3px dotted rgb(91, 0, 119);
     border-radius: 10px;
 }
 
@@ -71,9 +70,25 @@ body {
     border: 5px solid;
     height: 60%;
     width: 100%;
+    justify-content: space-between;
 }
 
 .calc {
-    height: 50%;
-    
+    height: 100%;
+    width: 22.5%;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.calc-text {
+    font-family: inherit;
+    font-size: 125%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calc-image {
+    max-height: 92%;
+    width: auto;
+    border-radius: inherit;
 }
