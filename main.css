@@ -78,17 +78,18 @@ body {
     width: 22.5%;
     border: 3px solid red;
     border-radius: 10px;
+    overflow: auto;
 }
 
 .calc-text {
     font-family: inherit;
     font-size: 125%;
+    max-width: 22.5%;
     text-align: center;
     font-weight: bold;
 }
 
 .calc-image {
     max-height: 92%;
-    width: auto;
     border-radius: inherit;
 }
