@@ -1,56 +1,54 @@
 window.onload = function () {
-
-    const screen = document.querySelector('.text')
-
-    let buffer = '0'
-
+    const screen = document.querySelector('.screen');
+  
+    let buffer = "0";
+  
     function buttonClick(value) {
         if (isNaN(value)) {
-            handleOperator(value)
+            handleOperator(value);
         } else {
-            handleNumber(value)
+            handleNumber(value);
         }
-        console.log(buffer)
-        screen.innerHTML = buffer
+        screen.textContent = buffer;
     }
-
+  
     function handleOperator(symbol) {
         switch (symbol) {
             case 'C':
-                buffer = '0'
+                buffer = "0";
                 break;
             case '←':
-                buffer = substring(0, buffer.length - 1)
+                buffer = buffer.substring(0, buffer.length - 1);
                 break;
             case '+':
             case '÷':
             case '×':
             case '−':
-                buffer += symbol
+                buffer += symbol;
                 break;
             case '=':
-                buffer = eval(buffer)
+                try {
+                    buffer = eval(buffer).toString();
+                } catch (error) {
+                    buffer = "Error";
+                }
+                break;
+            default:
+                buffer = "Error";
         }
     }
-
+  
     function handleNumber(number) {
         if (buffer === '0') {
-            buffer = number
+            buffer = number;
         } else {
-            buffer += number
+            buffer += number;
         }
     }
-
-    function initialize() {
-        let element = document.querySelectorAll('.calc-button')
-
-        for (i of element) {
-            i.addEventListener('click', function () {
-                buttonClick(this.innerHTML);
-            })
-        }
-
-    }
-
-    initialize();
-}
+  
+    document.querySelectorAll('.calc-button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            buttonClick(button.textContent);
+        });
+    });
+};
