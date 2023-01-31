@@ -13,17 +13,17 @@ window.onload = function () {
     }
   
     function handleOperator(symbol) {
-        switch (symbol) {
-            case 'C':
+        /*switch (symbol) {
+            /*case 'C':
                 buffer = "0";
                 break;
             case '←':
                 buffer = buffer.substring(0, buffer.length - 1);
                 break;
             case '+':
-            case '÷':
-            case '×':
-            case '−':
+            case '/':
+            case '*':
+            case '-':
                 buffer += symbol;
                 break;
             case '=':
@@ -34,7 +34,25 @@ window.onload = function () {
                 }
                 break;
             default:
+                console.log('No sign detected')
                 buffer = "Error";
+            break;           
+        }*/
+
+        if (symbol == 'C') {
+            buffer = '0'
+        } else if (symbol == '←') {
+            buffer = buffer.substring(0, buffer.length - 1)
+        } else if (symbol == '+' || symbol == '/' || symbol == '*' || symbol == '-') {
+            buffer = `${buffer}${symbol}`
+        } else if (symbol == '=') {
+            try {
+                buffer = eval(buffer).toString();
+            } catch (error) {
+                buffer = "Error";
+            }
+        } else {
+            buffer = "Error";
         }
     }
   
@@ -49,6 +67,7 @@ window.onload = function () {
     document.querySelectorAll('.calc-button').forEach(function(button) {
         button.addEventListener('click', function() {
             buttonClick(button.textContent);
+            console.log(button.textContent.toString())
         });
     });
 };
