@@ -2,7 +2,6 @@ window.onload = function () {
 
     let screen = document.querySelector('.screen-text')
     const possibleWords = ['school', 'jazz', 'score', 'ijstijd', 'carnaval', 'dextrose', 'picknick', 'kwarktaart', 'tornado', 'zevenenzestig', 'eucalyptus', 'magma', 'linnen', 'regenwoud', 'levertje', 'skelet', 'watermeloen']
-    let guessedLetters = []
     let info = document.querySelector('.instructions')
     let health = 10
     let healthscreen = document.querySelector('.health')
@@ -115,7 +114,7 @@ window.onload = function () {
     }
 
 
-    let setWord = 'linnen'
+    let setWord = possibleWords[getRandomInt()]
 
     let linelength = ''
     for (let i = 0; i < setWord.length; i++) {
