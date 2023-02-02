@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,21 @@
     <script src="hangman.js"></script>
     <title>Galgje</title>
 </head>
+
 <body>
 
     <div class="wrapper">
         <h1 class="title">Galgje</h1>
 
-        <div class="info">
+        <section class="info">
             <div class="instructions">Raad het woord, maar gebruik niet teveel letters.</div>
-            <div class="screen"></div>
-            <div class="health">Levens over: </div>
-        </div>
-        
-        <div class="game-buttons">
+            <div class="screen">
+                <p class="screen-text">________</p>
+            </div>
+            <div class="health">Levens over: 8</div>
+        </section>
+
+        <section class="game-buttons">
             <button class="button">A</button>
             <button class="button">B</button>
             <button class="button">C</button>
@@ -46,8 +50,9 @@
             <button class="button">X</button>
             <button class="button">Y</button>
             <button class="button">Z</button>
-        </div>
+        </section>
     </div>
-    
+
 </body>
+
 </html>

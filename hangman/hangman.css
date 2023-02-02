@@ -18,12 +18,77 @@ body {
     height: inherit;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-display: swap;
+    background: linear-gradient(-45deg, #4976fe, #ba0000, #4976fe, #ba0000);
+    background-size: 300% 300%;
+    animation: change-color 8s linear infinite;
+}
+
+@keyframes change-color {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 150% 50%;
+    }
 }
 
 .wrapper {
     border: 3px solid black;
-    min-height: 90%;
-    min-width: 80%;
+    border-radius: 10px;
+    flex-basis: 90%;
+    height: 90%;
+    align-items: center;
     justify-content: center;
-    display: flex;
+    padding: 10px;
+    backdrop-filter: blur(999px);
+}
+
+.title {
+    font-size: 50px;
+    height: 70px;
+    text-align: center;
+    width: 90%;
+    margin: auto auto;
+    border-bottom: 2px solid black;
+}
+
+.info {
+    height: auto;
+    text-align: center;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.instructions {
+    font-size: 30px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    height: auto;
+}
+
+.screen {
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 30px;
+    height: auto;
+    width: max-content;
+    margin: 30px auto;
+    letter-spacing: 5px;
+}
+
+.screen-text {
+    margin: auto 10px;
+    height: auto;
+}
+
+.health {
+    font-size: 30px;
+    height: auto;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.game-buttons {
+    border: 3px solid blue;
+    height: 50px;
 }
