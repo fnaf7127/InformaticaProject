@@ -20,7 +20,8 @@ body {
     font-display: swap;
     background: linear-gradient(-45deg, #4976fe, #ba0000, #4976fe, #ba0000);
     background-size: 300% 300%;
-    animation: change-color 8s linear infinite;
+    animation: change-color 15s linear infinite;
+    overflow: auto;
 }
 
 @keyframes change-color {
@@ -34,21 +35,24 @@ body {
 
 .wrapper {
     border: 3px solid black;
-    border-radius: 10px;
-    flex-basis: 90%;
+    border-radius: 20px;
+    width: 90%;
     height: 90%;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
+    justify-content: flex-start;
+    padding: 3px;
     backdrop-filter: blur(999px);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .title {
-    font-size: 50px;
-    height: 70px;
+    font-size: 40px;
+    height: auto;
     text-align: center;
     width: 90%;
-    margin: auto auto;
+    margin: 10px 0;
     border-bottom: 2px solid black;
 }
 
@@ -67,12 +71,12 @@ body {
 }
 
 .screen {
-    border: 2px solid black;
-    border-radius: 5px;
-    font-size: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 40px;
     height: auto;
     width: max-content;
-    margin: 30px auto;
+    margin: 20px auto;
     letter-spacing: 5px;
 }
 
@@ -82,13 +86,44 @@ body {
 }
 
 .health {
-    font-size: 30px;
+    font-size: 20px;
     height: auto;
-    margin: 10px 0;
+    margin: 8px 0;
     letter-spacing: 1px;
 }
 
+.drawing {
+    border: 3px dashed black;
+    border-radius: 10px;
+    height: 350px;
+    width: 600px;
+}
+
 .game-buttons {
-    border: 3px solid blue;
-    height: 50px;
+    height: auto;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.button-row {
+    justify-content: space-evenly;
+    display: flex;
+    margin: 10px 0;
+}
+
+.button {
+    width: 75px;
+    height: 75px;
+    margin: auto auto;
+    font-size: 30px;
+    background: linear-gradient(45deg, rgba(255, 98, 98, 0.289), rgba(75, 75, 255, 0.327));
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    transition: 200ms;
+}
+
+.button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0);
 }

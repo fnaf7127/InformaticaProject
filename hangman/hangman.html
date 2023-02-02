@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="hangman.css">
+    <link rel="icon" type="image/x-icon" href="/l_P12bUf_400x400-removebg-preview.ico">
     <script src="hangman.js"></script>
     <title>Galgje</title>
 </head>
@@ -18,38 +19,45 @@
         <section class="info">
             <div class="instructions">Raad het woord, maar gebruik niet teveel letters.</div>
             <div class="screen">
-                <p class="screen-text">________</p>
+                <p class="screen-text"></p>
             </div>
-            <div class="health">Levens over: 8</div>
+            <div class="health">Levens over: 10</div>
         </section>
 
+        <canvas class="drawing"></canvas>
+
         <section class="game-buttons">
-            <button class="button">A</button>
-            <button class="button">B</button>
-            <button class="button">C</button>
-            <button class="button">D</button>
-            <button class="button">E</button>
-            <button class="button">F</button>
-            <button class="button">G</button>
-            <button class="button">H</button>
-            <button class="button">I</button>
-            <button class="button">J</button>
-            <button class="button">K</button>
-            <button class="button">L</button>
-            <button class="button">N</button>
-            <button class="button">M</button>
-            <button class="button">O</button>
-            <button class="button">P</button>
-            <button class="button">Q</button>
-            <button class="button">R</button>
-            <button class="button">S</button>
-            <button class="button">T</button>
-            <button class="button">U</button>
-            <button class="button">V</button>
-            <button class="button">W</button>
-            <button class="button">X</button>
-            <button class="button">Y</button>
-            <button class="button">Z</button>
+            <div class="button-row">
+                <button class="button">A</button>
+                <button class="button">B</button>
+                <button class="button">C</button>
+                <button class="button">D</button>
+                <button class="button">E</button>
+                <button class="button">F</button>
+                <button class="button">G</button>
+                <button class="button">H</button>
+                <button class="button">I</button>
+                <button class="button">J</button>
+                <button class="button">K</button>
+                <button class="button">L</button>
+                <button class="button">N</button>
+                <button class="button">M</button>
+            </div>
+
+            <div class="button-row">
+                <button class="button">O</button>
+                <button class="button">P</button>
+                <button class="button">Q</button>
+                <button class="button">R</button>
+                <button class="button">S</button>
+                <button class="button">T</button>
+                <button class="button">U</button>
+                <button class="button">V</button>
+                <button class="button">W</button>
+                <button class="button">X</button>
+                <button class="button">Y</button>
+                <button class="button">Z</button>
+            </div>
         </section>
     </div>
 
