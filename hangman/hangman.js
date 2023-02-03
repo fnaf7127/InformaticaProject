@@ -141,6 +141,7 @@ window.onload = function () {
                 if (health == 0) {
                     info.textContent = 'Je hebt verloren... helaas. Herlaad de pagina om opnieuw te beginnen.'
                     disableButtons()
+                    screen.textContent = setWord
                 }
             } else {
 
