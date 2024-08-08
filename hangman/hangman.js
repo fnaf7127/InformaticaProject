@@ -1,7 +1,7 @@
 window.onload = function () {
 
     let screen = document.querySelector('.screen-text')
-    const possibleWords = ['school', 'jazz', 'score', 'ijstijd', 'carnaval', 'dextrose', 'picknick', 'kwarktaart', 'tornado', 'zevenenzestig', 'eucalyptus', 'magma', 'linnen', 'regenwoud', 'levertje', 'skelet', 'watermeloen']
+    const possibleWords = ['school', 'jazz', 'score', 'ijstijd', 'carnaval', 'dextrose', 'picknick', 'kwarktaart', 'tornado', 'zevenenzestig', 'eucalyptus', 'magma', 'linnen', 'regenwoud', 'levertje', 'skelet', 'watermeloen', 'arbeidsongeschiktheidsverzekeringsmaatschappijcommitteeleden']
     let info = document.querySelector('.instructions')
     let health = 10
     let healthscreen = document.querySelector('.health')
